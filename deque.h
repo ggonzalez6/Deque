@@ -1,27 +1,41 @@
 #ifndef DEQUE_H
 #define DEQUE_H
 
-class Deque {
- private:
-  int** blockmap;
-  int size;
-  int mapSize;
-  int blockSize;
-  int first_block;
-  int first_element;
-  int front_index;
-  int back_index;
+#include <iostream>
 
- public:
-  Deque();
+class Deque {
+private:
+  int** blockmap; // Internal memory blockmap (pointer to pointers)
+  int blockSize; // Size of each block
+  int capacity; // Total number of blocks in the blockmap
+  int head; // Index of the head of the deque
+  int tail; // Index of the tail of the deque
+  int numElements; // Number of elements in the deque
+  
+  // Utility function to resize the blockmap when needed
+  void resizeBlockmap(int newCapacity);
+  
+public:
+  Deque();  
+  
   ~Deque();
-  void push_front();
-  void push_back();
+  
+  void push_front(int value);
+  
+  void push_back(int value);
+  
   void pop_front();
+  
   void pop_back();
+  
   int front();
+  
   int back();
+  
   bool empty();
-  int getSize();
-  //operator[];
+  
+  int size();
+  
+  int operator[](int index);
+};
 #endif //DEQUE_H
