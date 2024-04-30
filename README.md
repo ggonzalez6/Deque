@@ -1,5 +1,5 @@
 # Deque
-In this assignment you will be building one of the most universal structures available in the standard library, a deque.
+In this assignment you we built one of the most universal structures available in the standard library, a deque, using a dynamic double array.
 
 ## Design Decisions
 * The deque only uses ints.  
@@ -23,7 +23,6 @@ In this assignment you will be building one of the most universal structures ava
 1. run `make` to create the program
 2. run `./deque` to run the program
 3. pick a file to open  
-4. 
 
 ## Challenges 
 For some reason our biggest issue was we front() giving a segmentation fault after popping the front off, but we eventually got that working. 
