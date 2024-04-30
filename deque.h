@@ -37,5 +37,7 @@ public:
   int size();
   
   int operator[](int index);
+
+  void read_from_file(std::string file_name);
 };
 #endif //DEQUE_H
