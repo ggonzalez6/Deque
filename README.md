@@ -2,9 +2,10 @@
 In this assignment you will be building one of the most universal structures available in the standard library, a deque.
 
 ## Design Decisions
-We decided to start the capacity at 4 blocks in the blockmap and the size of the blockmap being 10.
-Every part of the blockmap is initalized to NULL.  
-For the tests, when we read in the code, we are alternating between push front and push back.  
+* The deque only uses ints.  
+* We decided to start the capacity at 4 blocks in the blockmap and the size of the blockmap being 10.
+* Every part of the blockmap is initalized to NULL.  
+* For the tests, when we read in the code, we are alternating between push front and push back.  
 
 
 ## Functions and uses
