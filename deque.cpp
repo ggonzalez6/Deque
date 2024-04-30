@@ -1,3 +1,4 @@
+#include <fstream>
 #include <iostream>
 #include "deque.h"
 
@@ -112,7 +113,7 @@ int Deque::back() {
 }
 
 bool Deque::empty() {
-    return numElements == 0;
+  return numElements == 0;
 }
 
 int Deque::size() {
@@ -125,4 +126,30 @@ int Deque::operator[](int index) {
     return -1; // Error code for invalid index
   }
   return blockmap[head + index][0];
+}
+
+void Deque::read_from_file(string file_name) {
+  numElements = 0;
+  ifstream infile;
+  infile.open(file_name);
+  if(!infile) {
+    cout << "ERROR: There was an issue opening the file, please try again" << endl;
+  }
+  int number;
+  bool pushToFront = true; // Flag to alternate between pushing to front and back
+
+  while (infile >> number) {
+    if (pushToFront) {
+      push_front(number);
+      cout << "Pushing " << number << " to the front" << endl;
+    } else {
+      push_back(number);
+      cout << "Pushing " << number << " to the back" << endl;
+    }
+    pushToFront = !pushToFront; // Toggle the flag for the next iteration
+    
+  }
+  
+
+  infile.close();  
 }
