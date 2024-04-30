@@ -1,3 +1,12 @@
+/**
+ * @file main.cpp
+ * @author Gerardo Gonzalez & Daniel Way
+ * @date 2024-04-29
+ * @brief a menu with 4 file options for the user to choose from in-order to test our Deque
+ * 
+ * This is the main.cpp file where my partner and I created a easy to choose from menu that has 5 options. 4 of them are differnt files that carry a certin amount of numbers in order to test the capabilites of our Deque, and the 5th one is an option to exit the menu.
+ */
+
 
 #include <iostream>
 #include <string>
@@ -102,38 +111,6 @@ int main() {
     cin >> option;
     cout << endl;
   }
-  
-  /*  
-  Deque dq;
-  dq.push_front(1);
-  dq.push_back(2);
-  dq.push_back(3);
-  dq.push_front(4);
-  dq.push_back(5);
-  dq.push_back(6);
-  dq.push_back(7);
-  dq.push_back(8);
-  dq.push_back(9);
-  dq.push_front(10);
-  dq.push_front(11);
-
-
-
-  cout << "Front: " << dq.front() << endl;
-  cout << "Back: " << dq.back() << endl;
-
-  cout << "Size: " << dq.size() << endl;
-
-
-  dq.pop_front();
-  dq.pop_back();
-
-  cout << "Removed front and back" << endl;
-  cout << "Front: " << dq.front() << endl;
-  cout << "Back: " << dq.back() << endl;
-
-  cout << "Size: " << dq.size() << endl;
-  */
   return 0;
 }
 

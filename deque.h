@@ -1,8 +1,26 @@
+/**
+ * @file deque.h
+ * @author Gerardo Gonzalez & Daniel Way
+ * @date 2024-04-29
+ * @brief This is a header file for deque.cpp
+ * 
+ * This is a header file for deque.cpp that supports the exact same functions for a deque data structure
+ */
+
+
 #ifndef DEQUE_H
 #define DEQUE_H
 
 #include <iostream>
 
+
+/**
+ * This is a class called Deque that supports the exact function of the deque data structure 
+ *
+ * @class Deque deque.h "Deque/deque.h"
+ * @brief a class made to recreate a deque data structure 
+ *
+ */
 class Deque {
 private:
   int** blockmap; // Internal memory blockmap (pointer to pointers)
